@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Collector Leaderboard</title>
+    <link rel="stylesheet" href="../Leaderboard/style.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Company Icon (Top Left) -->
+    <div class="company-holder">
+        <img src="../Leaderboard/img/Logo.png" alt="Company Logo">
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="../Leaderboard/img/icon.png" alt="Star Icon" class="logo">
+            <h1>STAR COLLECTOR</h1>
+            <p>Encode Leaderboard</p>
+        </header>
+
+        <section class="input-section">
+            <input type="text" id="playerName" placeholder="Pilot Name" maxlength="15">
+            <input type="number" id="playerScore" placeholder="Score">
+            <div class="button-group">
+                <button id="addBtn">ADD</button>
+                <button id="toggleDeleteBtn" class="secondary-btn">MANAGE</button>
+            </div>
+        </section>
+
+        <!-- The Scrollable Area -->
+        <section class="leaderboard-section" id="scrollContainer">
+            <div id="scrollContent">
+                <table id="leaderboard">
+                    <thead>
+                        <tr>
+                            <th>RANK</th>
+                            <th>NAME</th>
+                            <th>STARS</th>
+                            <th class="delete-col hidden">DEL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody">
+                        <!-- Data injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fullscreen Button (Bottom Right) -->
+    <button id="fullscreenBtn" title="Toggle Fullscreen">
+        <svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg>
+    </button>
+
+    <script src="../Leaderboard/script.js"></script>
+</body>
+</html>
